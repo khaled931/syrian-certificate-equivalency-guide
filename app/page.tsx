@@ -1,4 +1,5 @@
 import CopyButton from '@/components/CopyButton';
+import PrintButton from '@/components/PrintButton';
 import {
   checklistText,
   documents,
@@ -169,13 +170,7 @@ export default function Home() {
         />
         <div className="mb-6 flex flex-wrap items-center justify-center gap-3 no-print">
           <CopyButton text={checklistText} />
-          <button
-            type="button"
-            onClick={undefined}
-            className="hidden rounded-full border border-ink/15 bg-white px-5 py-3 text-sm font-bold text-ink"
-          >
-            طباعة
-          </button>
+          <PrintButton />
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {documents.map((document) => (
@@ -253,7 +248,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="border-t border-white/60 bg-ink px-4 py-8 text-center text-white md:px-8">
+      <footer className="border-t border-white/60 bg-ink px-4 py-8 text-center text-white">
         <p className="font-black">{guideMeta.ownerLine}</p>
         <p className="mt-2 text-sm text-white/75">
           {guideMeta.appName} · {guideMeta.preparedBy} · آخر تحديث: {guideMeta.lastUpdated}
