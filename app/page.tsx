@@ -5,13 +5,15 @@ import {
   documents,
   faq,
   guideMeta,
-  importantNotes,
-  norwaySteps,
   quickPaths,
   specialCases,
-  syriaSteps,
   type Step
 } from '@/data/guide';
+import {
+  updatedImportantNotes as importantNotes,
+  updatedNorwaySteps as norwaySteps,
+  updatedSyriaSteps as syriaSteps
+} from '@/data/guide-overrides';
 
 function StepCard({ step, index }: { step: Step; index: number }) {
   return (
