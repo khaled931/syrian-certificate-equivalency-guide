@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --ink: #0b3551;
+  --teal: #1f9da0;
+  --paper: #fffdf8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at top right, rgba(31, 157, 160, 0.17), transparent 34rem),
+    linear-gradient(180deg, #fffdf8 0%, #eef7f7 48%, #f7f3ec 100%);
+  color: #163247;
+  font-family: Tahoma, Arial, sans-serif;
+}
+
+::selection {
+  background: rgba(31, 157, 160, 0.24);
+}
+
+.glass-card {
+  border: 1px solid rgba(255, 255, 255, 0.64);
+  background: rgba(255, 255, 255, 0.73);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 80px rgba(11, 53, 81, 0.11);
+}
+
+.section-anchor {
+  scroll-margin-top: 110px;
+}
+
+.check-card:has(input:checked) {
+  border-color: rgba(31, 157, 160, 0.72);
+  background: rgba(31, 157, 160, 0.08);
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+
+  .glass-card {
+    box-shadow: none;
+    border: 1px solid #ddd;
+    background: white;
+  }
+}
